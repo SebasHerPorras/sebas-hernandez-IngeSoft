@@ -1,0 +1,82 @@
+/* General */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+/* Header */
+header {
+  text-align: center;
+  background: #4a90e2;
+  color: white;
+  padding: 2rem;
+}
+
+/* Ocultar radios */
+.bottons input[type="radio"] {
+  display: none;
+}
+
+/* Estilos de labels (pestañas) */
+.bottons label {
+  padding: 10px 20px;
+  background: #ddd;
+  cursor: pointer;
+  margin-right: 5px;
+  border-radius: 5px 5px 0 0;
+  display: inline-block;
+  font-weight: bold;
+  transition: background 0.6s;
+}
+
+/* Estilos de labels (pestañas) */
+.bottons label:hover {
+  background: #2888a5;
+}
+
+/* Contenido oculto por defecto */
+.contenido {
+  display: none;
+  padding: 20px;
+  border: 2px solid #4a90e2;
+  background: white;
+  text-align: center;
+  max-width: 800px;
+  margin: 1rem auto 2rem auto;
+}
+.contenido img {
+  width: 350px; /* tamaño fijo para las imagenes */
+  height: 350px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+/* Mostrar según pestaña seleccionada */
+#tab1:checked ~ #sobre-mi {
+  display: block;
+}
+#tab2:checked ~ #trabajos {
+  display: block;
+}
+#tab3:checked ~ #pasatiempos {
+  display: block;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 1rem;
+  clear: both;
+  margin-top: 0; /* elimina el margen superior */
+  z-index: 100;
+}
