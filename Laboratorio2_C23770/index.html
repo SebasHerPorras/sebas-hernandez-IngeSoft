@@ -1,48 +1,60 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Página Personal</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <header>
-    <h1>Hola, soy Sebastián</h1>
-    <p>Estudiante de Computación en la UCR</p>
-  </header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Página Personal</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Hola, soy Sebastián</h1>
+      <h3>Estudiante de Computación en la UCR</h3>
+    </header>
 
-  <div class="bottons">
-    <!-- Botones de pestañas -->
-    <input type="radio" name="tab" id="tab1" checked>
-    <label for="tab1">Sobre mí</label>
+    <div class="bottons">
+      <!-- Botones de pestañas -->
+      <input type="radio" name="tab" id="tab1" checked />
+      <label for="tab1">Sobre mí</label>
 
-    <input type="radio" name="tab" id="tab2">
-    <label for="tab2">Trabajos</label>
+      <input type="radio" name="tab" id="tab2" />
+      <label for="tab2">Trabajos</label>
 
-    <input type="radio" name="tab" id="tab3">
-    <label for="tab3">Pasatiempos</label>
+      <input type="radio" name="tab" id="tab3" />
+      <label for="tab3">Pasatiempos</label>
 
-    <!-- Contenido de pestañas -->
-    <div class="contenido" id="sobre-mi">
-      <img src="images/yo.png" alt="Sobre mí">
-      <p>Soy estudiante de la carrera de Computación en la UCR, me interesa el desarrollo web y la programación.</p>
-      <p>Esta es una pagina web introductoria para el laboratorio 2 de ingeniería de software.</p>
+      <!-- Contenido de pestañas -->
+      <div class="contenido" id="sobre-mi">
+        <img src="images/yo.png" alt="Sobre mí" />
+        <p>
+          Soy estudiante de la carrera de Computación en la UCR, me interesa el
+          desarrollo web y la programación.
+        </p>
+        <p>
+          Esta es una pagina web introductoria para el laboratorio 2 de
+          ingeniería de software.
+        </p>
+      </div>
+
+      <div class="contenido" id="trabajos">
+        <img src="images/juegos.jpeg" alt="Trabajos" />
+        <p>
+          Actualmente no estoy trabajando pero mi tipo de trabajo ideal sería en
+          el apartado de análisis de datos con machine learning.
+        </p>
+      </div>
+
+      <div class="contenido" id="pasatiempos">
+        <img src="images/kirby-link.webp" alt="Pasatiempos" />
+        <p>
+          Me gusta leer manga, juegar video juegos y muy de vez en cuando
+          estudiar nuevas tecnologías.
+        </p>
+      </div>
     </div>
 
-    <div class="contenido" id="trabajos">
-      <img src="images/juegos.jpeg" alt="Trabajos">
-      <p>Actualmente no estoy trabajando pero mi tipo de trabajo ideal sería en el apartado de análisis de datos con machine learning.</p>
-    </div>
-
-    <div class="contenido" id="pasatiempos">
-      <img src="images/kirby-link.webp" alt="Pasatiempos">
-      <p>Me gusta leer manga, juegar video juegos y muy de vez en cuando estudiar nuevas tecnologías.</p>
-    </div>
-  </div>
-
-  <footer>
-    <p>&copy; 2025 Sebastián. Todos los derechos reservados.</p>
-  </footer>
-</body>
+    <footer>
+      <p>&copy; 2025 Sebastián. Todos los derechos reservados.</p>
+    </footer>
+  </body>
 </html>
