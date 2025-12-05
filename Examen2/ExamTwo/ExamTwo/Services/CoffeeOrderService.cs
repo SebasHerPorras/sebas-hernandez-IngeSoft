@@ -36,8 +36,19 @@ namespace ExamTwo.Services
 
             // Step 2: Calculate total cost
             var prices = _inventoryService.GetPrices();
-            int totalCost = 0;
 
+            var zeroPriceItems = orderRequest.Order.Keys.Where(k => !prices.ContainsKey(k) || prices[k] == 0).ToList();
+            if (zeroPriceItems.Any())
+            {
+                _logger.LogWarning("Order contains items with zero price: {Items}", string.Join(", ", zeroPriceItems));
+                return Task.FromResult(new OrderResultDto
+                {
+                    Success = false,
+                    Message = "Precio insuficiente para uno o más productos"
+                });
+            }
+
+            int totalCost = 0;
             try
             {
                 totalCost = orderRequest.Order.Sum(item => prices[item.Key] * item.Value);

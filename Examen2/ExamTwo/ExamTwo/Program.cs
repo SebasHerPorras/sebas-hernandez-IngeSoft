@@ -3,8 +3,19 @@ using ExamTwo.Interfaces;
 using ExamTwo.Repositories;
 using ExamTwo.Services;
 
-
 var builder = WebApplication.CreateBuilder(args);
+
+// Add CORS policy for frontend
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowVueFrontend", policy =>
+    {
+        policy.WithOrigins("http://localhost:8080", "http://localhost:8081")
+              .AllowAnyHeader()
+              .AllowAnyMethod()
+              .AllowCredentials();
+    });
+});
 
 // Add services to the container.
 builder.Services.AddControllers();
@@ -48,6 +59,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+// Enable CORS
+app.UseCors("AllowVueFrontend");
 
 app.UseHttpsRedirection();
 
